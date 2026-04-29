@@ -32,25 +32,29 @@ export default function Footer() {
         {/* Social Icons */}
         <div className="flex justify-center gap-4 mb-6">
           <a
-            href="#"
+            href="https://www.instagram.com"
+            target="_blank"
             className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_10px_rgba(249,115,22,0.6)] transition"
           >
             <FaInstagram />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/anish-joseph-6303031b5"
+            target="_blank"
             className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_10px_rgba(249,115,22,0.6)] transition"
           >
             <FaLinkedin />
           </a>
           <a
-            href="#"
+            href="https://github.com/Anishjoseph123"
+            target="_blank"
             className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_10px_rgba(249,115,22,0.6)] transition"
           >
             <FaGithub />
           </a>
           <a
-            href="#"
+            href="https://www.facebook.com"
+            target="_blank"
             className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_10px_rgba(249,115,22,0.6)] transition"
           >
             <FaFacebook />

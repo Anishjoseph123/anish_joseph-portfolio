@@ -69,29 +69,42 @@ export default function Home() {
             className="flex gap-6 mt-8 cursor-pointer"
           >
             <div className="border border-gray-700 border-[1px] rounded-[25px] w-8 h-8 flex items-center justify-center hover:bg-[#008bbe] transition">
-              <button className="bg-gray-500">
-                <FaLinkedin />
-              </button>
+              <a
+                href="https://www.linkedin.com/in/anish-joseph-6303031b5"
+                target="_blank"
+              >
+                <button className="bg-gray-500">
+                  <FaLinkedin />
+                </button>
+              </a>
             </div>
             <div className="border border-gray-700 border-[1px] rounded-[25px] w-8 h-8 flex items-center justify-center hover:bg-[#1d78ff]/50 transition">
-              <button>
-                <FaFacebook />
-              </button>
+              <a href="https://www.facebook.com" target="_blank">
+                <button>
+                  <FaFacebook />
+                </button>
+              </a>
             </div>
             <div className="border border-gray-700 border-[1px] rounded-[25px] w-8 h-8 flex items-center justify-center hover:bg-[#c400aa] transition">
-              <button>
-                <FaInstagram />
-              </button>
+              <a href="https://www.instagram.com" target="_blank">
+                <button>
+                  <FaInstagram />
+                </button>
+              </a>
             </div>
             <div className="border border-gray-700 border-[1px] rounded-[25px] w-8 h-8 flex items-center justify-center hover:bg-red-700 transition">
-              <button>
-                <FaYoutube />
-              </button>
+              <a href="https://www.youtube.com" target="_blank">
+                <button>
+                  <FaYoutube />
+                </button>
+              </a>
             </div>
             <div className="border border-gray-700 border-[1px] rounded-[25px] w-8 h-8 flex items-center justify-center hover:bg-[#0ea600] transition">
-              <button>
-                <FaWhatsapp />
-              </button>
+              <a href="https://wa.me/+8747014506" target="_blank">
+                <button>
+                  <FaWhatsapp />
+                </button>
+              </a>
             </div>
           </motion.div>
           {/* Stats */}
