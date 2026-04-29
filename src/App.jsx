@@ -5,7 +5,7 @@ import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Services from "./components/ServicesPage/Services";
 import Footer from "./components/Footer/Footer";
-import About from "./components/AboutPage/about";
+import About from "./components/AboutPage/About";
 import PortfolioCarousel from "./components/PortfolioPage/PortfolioCarousel";
 import ContactForm from "./components/ContactPage/ContactForm";
 
