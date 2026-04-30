@@ -8,17 +8,44 @@ import {
   FaNodeJs,
   FaReact,
 } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
+import { SiMui, SiTailwindcss } from "react-icons/si";
 import { div } from "framer-motion/m";
 
 const skills = [
-  { name: "React JS", value: 90, icon: <FaReact /> },
-  { name: "HTML", value: 95, icon: <FaHtml5 /> },
-  { name: "CSS", value: 90, icon: <FaCss3Alt /> },
-  { name: "JavaScript", value: 88, icon: <FaJs /> },
-  { name: "Tailwind CSS", value: 85, icon: <SiTailwindcss /> },
-  { name: "Bootstrap", value: 80, icon: <FaBootstrap /> },
-  { name: "Node JS", value: 75, icon: <FaNodeJs /> },
+  { name: "React JS", icon: <FaReact /> },
+  { name: "HTML", icon: <FaHtml5 /> },
+  { name: "CSS", icon: <FaCss3Alt /> },
+  { name: "JavaScript", icon: <FaJs /> },
+  { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+  { name: "Bootstrap", icon: <FaBootstrap /> },
+  { name: "Node JS", icon: <FaNodeJs /> },
+  { name: "Material UI", icon: <SiMui /> },
+];
+const experiences = [
+  {
+    role: "Junior Web Developer",
+    company: "Murba Solutions Pvt. Ltd.",
+    duration: "June 2025 - Present",
+    location: "Dubai, United Arab Emirates(Remote)",
+  },
+  {
+    role: "Executive - Program Management",
+    company: "SGBS Unnati Foundation NGO",
+    duration: "May 2024 - Oct 2024",
+    location: "Bayyappanahalli, Bangalore",
+  },
+  {
+    role: "Software Engineer",
+    company: "Mobil80 Solutions and Services Pvt.Ltd.",
+    duration: "November 2022 - January 2024",
+    location: "Vidyaranyapura, Bangalore",
+  },
+  {
+    role: "Associate Software Engineer (Intern)",
+    company: "Test Yantra Software Solutions Pvt.Ltd.",
+    duration: "December 2021 - Sept 2022",
+    location: "Basavanagudi, Bangalore",
+  },
 ];
 
 // const Circle = ({ value, icon }) => {
@@ -100,7 +127,7 @@ const Circle = ({ value, icon }) => {
           cx={size / 2}
           cy={size / 2}
           r={radius}
-          stroke="#ff7a00"
+          stroke="#ff8300"
           strokeWidth={stroke}
           fill="transparent"
           strokeDasharray={circumference}
@@ -125,7 +152,7 @@ export default function About() {
         {/* ABOUT */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-semibold">About Me</h2>
-          <p className="text-gray-400 mt-3">UI/UX Designer & Developer</p>
+          <p className="text-gray-400 mt-3">Front End Web Developer</p>
         </div>
 
         {/* CONTENT */}
@@ -161,16 +188,53 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           className="rounded-xl p-6 md:p-10"
         >
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8 text-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-8 text-center">
             {skills.map((skill, i) => (
               <div key={i} className="flex flex-col items-center gap-2">
-                <Circle value={skill.value} icon={skill.icon} />
-                <p className="text-orange-500 font-semibold">{skill.value}%</p>
+                <Circle icon={skill.icon} />
                 <p className="text-gray-400 text-sm">{skill.name}</p>
               </div>
             ))}
           </div>
         </motion.div>
+        <div className="mt-24">
+          <h3 className="text-2xl md:text-3xl font-semibold text-center mb-12">
+            Experience
+          </h3>
+
+          {/* SCROLL CONTAINER */}
+          <div className="relative overflow-x-auto scrollbar-hide">
+            {/* LINE */}
+            <div className="absolute top-1/2 left-0 w-full h-[2px] bg-white/20"></div>
+
+            {/* ITEMS */}
+            <div className="flex gap-16 px-10 py-20 min-w-max">
+              {experiences.map((exp, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 60 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.2 }}
+                  className="relative w-1/4 flex-shrink-0 text-center"
+                >
+                  {/* DOT */}
+                  <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-orange-500 rounded-full border-4 border-black z-10"></div>
+
+                  {/* CARD */}
+                  <div className="mt-16 bg-white/5 border border-white/10 rounded-xl p-5 backdrop-blur-lg hover:bg-white/10 transition">
+                    <h4 className="font-semibold text-lg">{exp.role}</h4>
+
+                    <p className="text-orange-400 text-sm mt-1">
+                      {exp.company}
+                    </p>
+                    <p className="text-xs text-gray-400 mt-1">{exp.duration}</p>
+                    <p className="text-sm text-gray-400 mt-3">{exp.location}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

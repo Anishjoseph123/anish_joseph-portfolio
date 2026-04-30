@@ -6,8 +6,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Services from "./components/ServicesPage/Services";
 import Footer from "./components/Footer/Footer";
 import About from "./components/AboutPage/About";
-import PortfolioCarousel from "./components/PortfolioPage/PortfolioCarousel";
 import ContactForm from "./components/ContactPage/ContactForm";
+import PortfolioGrid from "./components/PortfolioPage/PortfolioGrid";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<PortfolioCarousel />} />
+          <Route path="/portfolio" element={<PortfolioGrid />} />
           <Route path="/contact" element={<ContactForm />} />
         </Routes>
         <Footer />
