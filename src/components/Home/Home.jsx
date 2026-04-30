@@ -119,7 +119,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h3 className="text-orange-500 text-xl font-bold">4+</h3>
+              <h3 className="text-orange-500 text-xl font-bold">6+</h3>
               <p className="text-gray-400 text-sm">Projects</p>
             </div>
           </motion.div>
